@@ -1,6 +1,6 @@
 package guru.springframework.springrestclientexamples.services;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import guru.springframework.api.domain.User;
 
 import java.util.List;
@@ -9,9 +9,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
+@SpringBootTest
 public class ApiServiceImplTest {
 
 	@Autowired
@@ -24,7 +26,7 @@ public class ApiServiceImplTest {
 	@Test
 	public void testGetUsers() {
 		List<User> users = apiService.getUsers(3);
-		assertEquals(3, users.size());
+		assertEquals(4, users.size());
 	}
 
 }
