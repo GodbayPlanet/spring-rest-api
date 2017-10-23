@@ -10,9 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-/**
- * Created by jt on 9/21/17.
- */
 @Service
 public class ApiServiceImpl implements  ApiService {
 
