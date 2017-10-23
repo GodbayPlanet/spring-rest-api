@@ -28,8 +28,11 @@ public class ApiServiceImpl implements  ApiService {
     @Override
     public List<User> getUsers(Integer limit) {
 
-    	UriComponentsBuilder uriBuilder = UriComponentsBuilder.fromUriString(api_url).queryParam("limit", limit);
-        UserData userData = restTemplate.getForObject(uriBuilder.toUriString() + limit, UserData.class);
+        UriComponentsBuilder uriBuilder = UriComponentsBuilder
+                .fromUriString(api_url)
+                .queryParam("limit", limit);
+
+        UserData userData = restTemplate.getForObject(uriBuilder.toUriString(), UserData.class);
         return userData.getData();
     }
 }
